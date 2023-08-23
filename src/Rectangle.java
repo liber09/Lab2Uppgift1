@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle extends Shape {
 
     private double width;
     private double height;
@@ -17,5 +17,17 @@ public class Rectangle {
 
     public void setWidth(double width) {
         this.width = width;
+    }
+
+    //Method that calculates the area of the rectangle
+    @Override
+    public double getArea() {
+        return getWidth() * getHeight();
+    }
+
+    //Method that calculates the perimeter of the rectangle
+    @Override
+    public double getPerimeter() {
+        return getWidth()+getWidth()+getHeight()+getHeight();
     }
 }

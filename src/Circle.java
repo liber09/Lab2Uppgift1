@@ -1,4 +1,4 @@
-public class Circle extends Shape {
+public class Circle extends Shape implements Comparable<Circle>{
     double radius;
 
     public double getDiameter() {
@@ -19,5 +19,10 @@ public class Circle extends Shape {
     @Override
     public double getPerimeter() {
         return 2*Math.PI*radius;
+    }
+
+    @Override
+    public int compareTo(Circle anotherCircle) {
+        return (int) (this.getArea()-anotherCircle.getArea());
     }
 }

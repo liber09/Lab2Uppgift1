@@ -1,4 +1,4 @@
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Comparable<Rectangle> {
 
     private double width;
     private double height;
@@ -29,5 +29,15 @@ public class Rectangle extends Shape {
     @Override
     public double getPerimeter() {
         return getWidth()+getWidth()+getHeight()+getHeight();
+    }
+
+    @Override
+    public int compareTo(Circle o) {
+        return 0;
+    }
+
+    @Override
+    public int compareTo(Rectangle anotherRectangle) {
+        return (int) (this.getArea()-anotherRectangle.getArea());
     }
 }

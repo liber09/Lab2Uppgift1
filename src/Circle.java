@@ -1,11 +1,14 @@
 public class Circle extends Shape implements Comparable<Circle>{
     double radius;
 
+    public Circle(Double radius){
+        this.radius = radius;
+    }
     public double getDiameter() {
         return radius;
     }
 
-    public void setDiameter(double value){
+    public void setRadius(double value){
         this.radius = value;
     }
 

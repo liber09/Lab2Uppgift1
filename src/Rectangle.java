@@ -36,13 +36,12 @@ public class Rectangle extends Shape implements Comparable<Rectangle> {
         return getWidth()+getWidth()+getHeight()+getHeight();
     }
 
-    @Override
-    public int compareTo(Circle o) {
-        return 0;
-    }
-
+    /*
+    Compare two rectangles against each other and return positive if this is larger,
+    negative if other is larger or 0 if equal area.
+     */
     @Override
     public int compareTo(Rectangle anotherRectangle) {
-        return (int) (this.getArea()-anotherRectangle.getArea());
+        return (int) (this.getArea() - anotherRectangle.getArea());
     }
 }

@@ -24,6 +24,10 @@ public class Circle extends Shape implements Comparable<Circle>{
         return 2*Math.PI*radius;
     }
 
+    /*
+    Compare two circles against each other and return positive if this is larger,
+    negative if other is larger or 0 if equal area.
+     */
     @Override
     public int compareTo(Circle anotherCircle) {
         return (int) (this.getArea()-anotherCircle.getArea());
